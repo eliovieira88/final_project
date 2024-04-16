@@ -1,25 +1,29 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[ ]:
+
+
 import streamlit as st
 import pandas as pd
 from joblib import load
-import os
 
-# Get the directory where the script is located
-current_directory = os.path.dirname(os.path.abspath(__file__))
 
-# Define relative paths to data files and model
-data_file_path = os.path.join(current_directory, "df_clicks_filtered_3_countries.csv")
-data_file_path2 = os.path.join(current_directory, "data_for_model.csv")
-model_file_path = os.path.join(current_directory, "best_gb_regressor_model.pkl")
+# In[9]:
 
-# Load data and model
+
+data_file_path = r'C:\Users\Élio Vieira\Desktop\IronHack\final_project\data\cleaned data\df_clicks_filtered_3_countries.csv'
 df_clicks_filtered_3_countries = pd.read_csv(data_file_path)
-df_encoded_3_countries = pd.read_csv(data_file_path2)
-loaded_model = load(model_file_path)
 
-# Define options
+data_file_path2 = r'C:\Users\Élio Vieira\Desktop\IronHack\final_project\data\data_for_model.csv'
+df_encoded_3_countries = pd.read_csv(data_file_path2)
+
+
+# In[10]:
+
+
+loaded_model = load(r'C:\Users\Élio Vieira\Desktop\IronHack\final_project\notebooks\best_gb_regressor_model.pkl')
+
 vertical_options = df_clicks_filtered_3_countries['vertical'].unique()
 country_options = df_clicks_filtered_3_countries['advertiser_country'].unique()
 platform_options = df_clicks_filtered_3_countries['advertising_platform_id'].unique()
@@ -50,6 +54,14 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+# In[11]:
+
+
+
+
+# In[ ]:
 
 
 
