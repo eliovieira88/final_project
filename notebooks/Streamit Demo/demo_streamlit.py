@@ -47,8 +47,9 @@ def main():
         user_data_encoded = user_data_encoded.drop(columns=['cost_per_goal'], errors='ignore')
 
         prediction = loaded_model.predict(user_data_encoded)
+        rounded_prediction = round(prediction[0], 2)  # Round to 2 decimal places
 
-        st.write(f"Predicted cost_per_goal: {prediction[0]}")
+        st.write(f"Predicted cost_per_goal: {rounded_prediction}")
 
 
 if __name__ == '__main__':
