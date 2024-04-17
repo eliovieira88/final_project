@@ -13,6 +13,7 @@ from joblib import load
 
 
 data_file_path = r'C:\Users\Élio Vieira\Desktop\IronHack\final_project\data\cleaned data\df_clicks_filtered_3_countries.csv'
+#data_file_path = r'..\data\cleaned data\df_clicks_filtered_3_countries.csv'
 df_clicks_filtered_3_countries = pd.read_csv(data_file_path)
 
 data_file_path2 = r'C:\Users\Élio Vieira\Desktop\IronHack\final_project\data\data_for_model.csv'
@@ -49,7 +50,7 @@ def main():
         prediction = loaded_model.predict(user_data_encoded)
         rounded_prediction = round(prediction[0], 2)  # Round to 2 decimal places
 
-        st.write(f"Predicted cost_per_goal: {rounded_prediction}")
+        st.write(f"Predicted cost_per_goal: {rounded_prediction}€")
 
 
 if __name__ == '__main__':
