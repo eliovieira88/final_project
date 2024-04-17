@@ -20,7 +20,6 @@ The dataset used in this project was based on data from an online advertising pl
 - Scikit-learn (sklearn): Library used for machine learning algorithms and tools.
 - Joblib: Library used for lightweight pipelining in Python.
 - XGBoost: Library used for gradient boosting algorithms.
-- Requests: Library used for sending HTTP requests and fetching data from websites.
 - Regular Expressions (re): Used for pattern matching and text processing.
 - DateTime: Library used for manipulating dates and times.
 
@@ -45,7 +44,7 @@ The dataset used in this project was based on data from an online advertising pl
 
 - The database must be divided into Clicks and Leads, otherwise the standard deviation is too high and the number of outliers will jeopardize the ML Model.
 - The best criteria to use in the machine learning model to predict CPG are countries, verticals and platforms. These are the ones that have shown the highest correlation.
-- Adding more fields to the ML Model will make it more complete and reduce the margin for error. The ideal Model will be when it is possible to consider all the keywords for each platform, country, city, platform and vertical. Each campaign can contain 30, 40, 50 or more keywords. 
+- Adding more fields to the ML Model will make it more complete and reduce the margin for error. The ideal Model will be when it is possible to consider all the keywords for each country, city, platform and vertical. Each campaign can contain 30, 40, 50 or more keywords. 
 
 
 ## Conclusion
